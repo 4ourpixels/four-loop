@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
+
+    <!-- Nav start -->
     <nav>
         <div class="nav-left">
             <img src="./images/logo.png" class="logo" alt="Logo">
@@ -21,15 +23,73 @@
                 <img src="./images/search.png" alt="">
                 <input type="text" placeholder="Search">
             </div>
-            <div class="nav-user-icon online">
+            <div class="nav-user-icon online" onclick="settingsMenuToggle()">
                 <img src="./images/profile-pic.png" alt="">
             </div>
         </div>
-    </nav>
 
-    <div class="container">
+        <!-- Settings menu start -->
+        <div class="settings-menu">
+
+            <!-- Toggle dark mode start -->
+            <div id="dark-btn" class="dark-btn-on">
+                <span></span>
+            </div>
+            <!-- Toggle dark mode end -->
+
+            <div class="settings-menu-inner">
+                <div class="user-profile">
+                    <img src="./images/profile-pic.png" alt="">
+                    <div>
+                        <p>Franklin Saint</p>
+                        <a href="#">See your profile</a>
+                    </div>
+                </div>
+                <hr>
+                <div class="user-profile">
+                    <img src="./images/feedback.png" alt="">
+                    <div>
+                        <p>Give Feedback</p>
+                        <a href="#">Help us to improve the new design</a>
+                    </div>
+                </div>
+                <hr>
+
+                <div class="settings-links">
+                    <img src="./images/setting.png" class="settings-icon">
+                    <a href="#">Settings & Privacy
+                        <img src="./images/arrow.png" width="10px">
+                    </a>
+                </div>
+                <div class="settings-links">
+                    <img src="./images/help.png" class="settings-icon">
+                    <a href="#">Help & Support
+                        <img src="./images/arrow.png" width="10px">
+                    </a>
+                </div>
+                <div class="settings-links">
+                    <img src="./images/display.png" class="settings-icon">
+                    <a href="#">Display & Accessibility
+                        <img src="./images/arrow.png" width="10px">
+                    </a>
+                </div>
+                <div class="settings-links">
+                    <img src="./images/logout.png" class="settings-icon">
+                    <a href="#">Logout
+                        <img src="./images/arrow.png" width="10px">
+                    </a>
+                </div>
+
+            </div>
+        </div>
+        <!-- Settings menu end -->
+
+    </nav>
+    <!-- Nav end -->
+
+    <main class="container">
         <!-- Left sidebar starts -->
-        <div class="left-sidebar">
+        <aside class="left-sidebar">
             <div class="imp-links">
                 <a href="#"><img src="./images/news.png" alt="">Latest news</a>
                 <a href="#"><img src="./images/friends.png" alt="">Friends</a>
@@ -45,13 +105,13 @@
                 <a href="#"><img src="./images/shortcut-3.png" alt=""> Full Stack Development</a>
                 <a href="#"><img src="./images/shortcut-4.png" alt=""> Website Experts</a>
             </div>
-        </div>
+        </aside>
         <!-- Left sidebar ends -->
 
         <!-- Main content start -->
-        <div class="main-content">
+        <main class="main-content">
             
-            <div class="story-gallery">
+            <section class="story-gallery">
                 <div class="story story1">
                     <img src="./images/upload.png" alt="Upload Icon">
                     <p>Post Story</p>
@@ -72,9 +132,9 @@
                     <img src="./images/member-4.png" alt="Upload Icon">
                     <p>Franklin</p>
                 </div>
-            </div>
+            </section>
 
-            <div class="write-post-container">
+            <section class="write-post-container">
                 <div class="post-row">
                     <div class="user-profile">
                         <img src="./images/profile-pic.png" alt="">
@@ -94,9 +154,10 @@
                         <a href="#"><img src="./images/feeling.png" alt=""> Feeling/Activity</a>
                     </div>
                 </div>
-            </div>
+            </section>
+
             <!-- Post one start -->
-            <div class="post-container">
+            <article class="post-container">
                 <div class="user-profile">
                     <img src="./images/profile-pic.png" alt="">
                     <div>
@@ -127,11 +188,11 @@
                         <i class="fas fa-caret-down"></i>
                     </div>
                 </div>
-            </div>
+            </article>
             <!-- Post one end -->
 
             <!-- Post two start -->
-            <div class="post-container">
+            <article class="post-container">
                 <div class="user-profile">
                     <img src="./images/profile-pic.png" alt="">
                     <div>
@@ -152,23 +213,130 @@
 
                 <div class="post-row">
                     <div class="activity-icons">
-                        <div><img src="./images/like.png"> 40</div>
-                        <div><img src="./images/comments.png"> 4</div>
-                        <div><img src="./images/share.png"> 400 </div>
+                        <div><img src="./images/like-blue.png"> 4044</div>
+                        <div><img src="./images/comments.png"> 4004</div>
+                        <div><img src="./images/share.png"> 4004</div>
                     </div>
                     <div class="post-profile-icon">
                         <img src="./images/profile-pic.png"> 
                         <i class="fas fa-caret-down"></i>
                     </div>
                 </div>
-            </div>
+            </article>
             <!-- Post two end -->
 
-        </div>
+            <!-- Post three start -->
+            <article class="post-container">
+                <div class="user-profile">
+                    <img src="./images/profile-pic.png" alt="">
+                    <div>
+                        <p>Franklin Saint</p>
+                        <span>Wed March 13 2024, 12:59pm</span>
+                    </div>
+                </div>
+                <p class="post-text">
+                    They're not fond of rules. And they have no 
+                    respect for the <span>status quo</span>. You can praise 
+                    them, disagree with them, quote them, 
+                    disbelieve them, glorify or vilify them
+                    <a href="#">#TakingThemBackToSchool</a>
+                    <a href="#">#400MilesAbove</a>
+                </p>
+                <img src="./images/feed-image-3.png" class="post-img">
+
+
+                <div class="post-row">
+                    <div class="activity-icons">
+                        <div><img src="./images/like-blue.png"> 404</div>
+                        <div><img src="./images/comments.png"> 444</div>
+                        <div><img src="./images/share.png"> 4400 </div>
+                    </div>
+                    <div class="post-profile-icon">
+                        <img src="./images/profile-pic.png"> 
+                        <i class="fas fa-caret-down"></i>
+                    </div>
+                </div>
+            </article>
+            <!-- Post three end -->
+
+            <!-- Post four start -->
+            <article class="post-container">
+                <div class="user-profile">
+                    <img src="./images/profile-pic.png" alt="">
+                    <div>
+                        <p>Franklin Saint</p>
+                        <span>Wed March 13 2024, 12:59pm</span>
+                    </div>
+                </div>
+                <p class="post-text">
+                    They're not fond of rules. And they have no 
+                    respect for the <span>status quo</span>. You can praise 
+                    them, disagree with them, quote them, 
+                    disbelieve them, glorify or vilify them
+                    <a href="#">#TakingThemBackToSchool</a>
+                    <a href="#">#400MilesAbove</a>
+                </p>
+                <img src="./images/feed-image-4.png" class="post-img">
+
+
+                <div class="post-row">
+                    <div class="activity-icons">
+                        <div><img src="./images/like-blue.png"> 4440</div>
+                        <div><img src="./images/comments.png"> 44</div>
+                        <div><img src="./images/share.png"> 40 </div>
+                    </div>
+                    <div class="post-profile-icon">
+                        <img src="./images/profile-pic.png"> 
+                        <i class="fas fa-caret-down"></i>
+                    </div>
+                </div>
+            </article>
+            <!-- Post four end -->
+
+            <!-- Post five start -->
+            <article class="post-container">
+                <div class="user-profile">
+                    <img src="./images/profile-pic.png" alt="">
+                    <div>
+                        <p>Franklin Saint</p>
+                        <span>Wed March 13 2024, 12:59pm</span>
+                    </div>
+                </div>
+                <p class="post-text">
+                    They're not fond of rules. And they have no 
+                    respect for the <span>status quo</span>. You can praise 
+                    them, disagree with them, quote them, 
+                    disbelieve them, glorify or vilify them
+                    <a href="#">#TakingThemBackToSchool</a>
+                    <a href="#">#400MilesAbove</a>
+                </p>
+                <img src="./images/feed-image-5.png" class="post-img">
+
+
+                <div class="post-row">
+                    <div class="activity-icons">
+                        <div><img src="./images/like.png"> 440</div>
+                        <div><img src="./images/comments.png"> 40</div>
+                        <div><img src="./images/share.png"> 4044 </div>
+                    </div>
+                    <div class="post-profile-icon">
+                        <img src="./images/profile-pic.png"> 
+                        <i class="fas fa-caret-down"></i>
+                    </div>
+                </div>
+            </article>
+            <!-- Post five end -->
+
+            <!-- Load more btn start -->
+            <button type="button" class="load-more-btn">Load More</button>
+            <!-- Load more btn end -->
+        </main>
         <!-- Main content end -->
 
+
+
         <!-- Right sidebar start -->
-        <div class="right-sidebar">
+        <section class="right-sidebar">
 
             <!-- Events starts -->
             <div class="sidebar-title">
@@ -235,8 +403,14 @@
             </div>
             <!-- Conversations end -->
 
-        </div>
+        </section>
         <!-- Right sidebar end -->
-    </div>
+    </main>
+
+    <footer class="footer">
+        <p>Copyright 2024 - Fourbook</p>
+    </footer>
+
+    <script src="./script.js"></script>
 </body>
 </html>
